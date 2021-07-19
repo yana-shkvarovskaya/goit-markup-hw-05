@@ -295,6 +295,39 @@ display: none;
   margin-right: 30px;
 }
 
+.work .item{
+  position: relative;
+}
+
+.title-work{
+  margin: 0;
+  width: 100%;
+  padding: 27px 82px 27px 83px;
+  white-space: nowrap;
+  color:var(--primary-white-color); 
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 0;
+
+  background: rgba(47, 48, 58, 0.8);
+}
+
+.title-work.mobile{
+  padding: 27px 85px 27px 86px;
+}
+
+.title-work.design{
+  padding: 27px 90px 27px 91px;
+}
+
+
+
+
 /* Team */
 .section-team {
   background-color: var(--secondary-bcg-color);
@@ -604,6 +637,7 @@ address {
 .project-list .description {
   border: 1px solid #eeeeee;
   padding: 20px 24px;
+  position: relative;
 }
 
 .project-list .link {
@@ -626,3 +660,32 @@ address {
   font-size: 16px;
   line-height: 1.88;
 }
+
+.project-overlay {
+  position: relative;
+  width: 370px;
+}
+
+.project-overlay-text{
+  display: inline-block;
+  content: "";
+  position: absolute;
+  width: 370px;
+  height: 294px;
+
+  top: 0;
+  margin: 0;
+  padding: 63px 24px;
+  color: var(--primary-white-color);
+  font-size: 18px;
+  line-height: 1.56;
+
+  background-color: rgba(33, 150, 243, 0.9);
+  opacity: 0;
+}
+
+.project-overlay:hover .project-overlay-text{
+opacity: 1;
+}
+
+
