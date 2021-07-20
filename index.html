@@ -32,7 +32,8 @@
             <li class="item">
               <a href="./portfolio.html" class="link">Портфолио</a>
             </li>
-            <li class="item"><a href="" class="link">Контакты</a></li>
+            <li class="item"><a href="" class="link">Контакты</a>
+            </li>
           </ul>
         </nav>
         <ul class="auth-nav">
@@ -61,7 +62,16 @@
             Эффективные решения <br />
             для вашего бизнеса
           </h1>
-          <button type="button" class="hero-button">Заказать услугу</button>
+          <button data-modal-open type="button" class="hero-button">Заказать услугу</button>
+        </div>
+        <div class="backdrop is-hidden" data-modal>
+          <div class="modal">
+            <button data-modal-close type="button" class="modal-button">
+              <svg class="icon-vector">
+                <use href="./images/vector.svg#icon-Vector"></use>
+              </svg>
+            </button>
+          </div>
         </div>
       </section>
       <!--Секция наши преимущества-->
@@ -421,5 +431,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/modal.js"></script>
   </body>
 </html>

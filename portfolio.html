@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css">
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
-  <body class="page">
+  <body class="page" >
      <!--Шапка сайта-->
      <header class="page-header">
       <div class="container main-nav">
@@ -270,5 +270,13 @@
       </div>
     </div>
     </footer>
+    <script>
+      const 
+      { height: pageHeaderHeight } = document
+        .querySelector(".page-header")
+        .getBoundingClientRect();
+
+      document.body.style.paddingTop = `${pageHeaderHeight}px`;
+    </script>
   </body>
 </html>
