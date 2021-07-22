@@ -70,7 +70,59 @@
                 <use href="./images/vector.svg#icon-Vector"></use>
               </svg>
             </button>
+          <form class="form js-speaker-form">
+            <h2 class="form-title">Оставьте свои данные, мы вам перезвоним</h2>
+            <div class="form-field">
+            <label class="form-lable" for="name">Имя</label>
+            <input class="form-input" type="text" name="name" id="name" />
+            </div>
+            <div class="form-field">
+            <label class="form-lable" for="tel">Телефон</label>
+            <input class="form-input" type="tel" name="tel" id="tel">
           </div>
+            <div class="form-field">
+            <label class="form-lable" for="mail">Почта</label>
+            <input class="form-input" type="email" name="mail" id="mail" />
+          </div>
+        <div class="form-field comments">
+            <label class="form-lable" for="comment">Комментарий</label>
+            <textarea class="form-textarea" name="comment" id="comment"  placeholder="Введите текст"></textarea>
+          </div>
+          <div class="agreement">
+            <input class="agreement-input" type="checkbox" name="agreement" id="agreement">
+            <label for="agreement-label">Соглашаюсь с рассылкой и принимаю Условия договора</label>
+          </div>
+            <button class="form-button" type="submit">Отправить</button>
+          </form>
+          </div>
+
+          <!-- <div role="group" class="group">
+            <input type="checkbox" name="topic" value="html" id="html"/>
+            <label for="html">HTML</label>
+
+            <input type="checkbox" name="topic" value="css" id="css"/>
+            <label for="css">CSS</label>
+
+            <input type="checkbox" name="topic" value="js" id="js">
+            <label for="js">JS</label>
+          </div>
+
+          <div role="group">
+          <input type="radio" name="grade" value="junior" id="junior">
+          <label for="junior">Junior</label>
+
+          <input type="radio" name="grade" value="middle" id="middle">
+          <label for="middle">Middle</label>
+
+          <input type="radio" name="grade" value="senior" id="senior">
+          <label for="senior">Senior</label>
+        </div>
+
+        <label for="pdf">Загрузить файл</label>
+        <input type="file" name="pdf" id="pdf"> -->
+    
+
+          
         </div>
       </section>
       <!--Секция наши преимущества-->
@@ -431,5 +483,20 @@
       </div>
     </footer>
     <script src="./js/modal.js"></script>
+    <script>
+      (() => {
+        document
+          .querySelector('.js-speaker-form')
+          .addEventListener('submit', e => {
+            e.preventDefault();
+
+            new FormData(e.currentTarget).forEach((value, name) =>
+              console.log(`${name}: ${value}`),
+            );
+
+            e.currentTarget.reset();
+          });
+      })();
+    </script>
   </body>
 </html>
